@@ -19,6 +19,12 @@ export const wallet = (state = INITIAL_STATE, action: AnyAction) => {
         currencies: action.payload,
       };
     }
+    case 'REMOVE_EXPENSES': {
+      return {
+        ...state,
+        expenses: state.expenses.filter((e: any) => e.id !== action.payload),
+      };
+    }
     default: return state;
   }
 };

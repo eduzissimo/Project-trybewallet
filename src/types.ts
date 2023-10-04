@@ -14,4 +14,19 @@ export type User = {
   }
 };
 
+export type GlobalState = {
+  user: User,
+  wallet: User,
+};
+
+export type ExpenseType = {
+  id?: number;
+  exchangeRates: any;
+  value: string;
+  description: string;
+  currency: string;
+  method: string;
+  tag: string;
+};
+
 export type Dispatch = ThunkDispatch<User, null, AnyAction>;

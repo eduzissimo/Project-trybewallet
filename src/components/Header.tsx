@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <div>
-      <h2 data-testid="email-field">{ userEmail }</h2>
+      <h2 data-testid="email-field">{`Email: ${userEmail}`}</h2>
       <h2 data-testid="total-field">{ totalValue.toFixed(2) }</h2>
       <h2 data-testid="header-currency-field">BRL</h2>
     </div>

@@ -23,6 +23,16 @@ export const addExpenses = (currencies: any) => ({
   payload: currencies,
 });
 
+export const removeExpenses = (id: number) => ({
+  type: 'REMOVE_EXPENSES',
+  payload: id,
+});
+
+export const editExpenses = (id: number) => ({
+  type: 'EDIT_EXPENSES',
+  payload: id,
+});
+
 export const getAPI = () => async (dispatch:Dispatch) => {
   const response = await globalCurrency();
   const updatedCurrencies = Object.keys(response).filter((e) => e !== 'USDT');
